@@ -1,5 +1,5 @@
 {
-    "name": "itherz/phpci-deployer-plugin",
+    "name": "itherz/deployer-phpcensor-plugin",
     "description": "Simple deployer(deployer.org) plugin for PHPCI",
     "license": "MIT",
     "authors": [
