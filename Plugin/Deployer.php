@@ -9,14 +9,14 @@
  * @link https://github.com/ket4yii/phpci-deployer-plugin
  */
 
-namespace Ket4yii\PHPCI\Deployer\Plugin;
+namespace Ket4yii\PHPCensor\Deployer\Plugin;
 
-use PHPCI\Builder;
-use PHPCI\Model\Build;
+use PHPCensor\Builder;
+use PHPCensor\Model\Build;
 
-class Deployer implements \PHPCI\Plugin {
+class Deployer implements \PHPCensor\Plugin {
 
-  protected $phpci; 
+  protected $PHPCensor; 
   protected $build;
   protected $config;
   protected $dep;
@@ -30,25 +30,25 @@ class Deployer implements \PHPCI\Plugin {
    * $options['regexp']    Regular Expression Filename Capture. Default: /\.php$/
    * $options['stub']      Stub Content. No Default Value
    *
-   * @param Builder $phpci   PHPCI instance 
+   * @param Builder $PHPCensor   PHPCensor instance 
    * @param Build   $build   Build instance 
    * @param array   $options Plugin options 
    */
   public function __construct(
-      Builder $phpci,
+      Builder $PHPCensor,
       Build $build,
       array $options = array()
   ) {
-    $this->phpci = $phpci;
+    $this->PHPCensor = $PHPCensor;
     $this->build = $build; 
     $this->config = $options;
 
-    $this->dep = $this->phpci->findBinary('dep');
+    $this->dep = $this->PHPCensor->findBinary('dep');
     $this->branch = $this->build->getBranch();
   }
 
   /**
-   * PHPCI plugin executor.
+   * PHPCensor plugin executor.
    *
    * @return bool Did plugin execute successfully 
    */
@@ -59,7 +59,7 @@ class Deployer implements \PHPCI\Plugin {
     $cmd = [];
 
     if (($validationResult = $this->validateConfig()) !== NULL) {
-      $this->phpci->log($validationResult['message']);
+      $this->PHPCensor->log($validationResult['message']);
 
       return $validationResult['successful']; 
     }
@@ -98,7 +98,7 @@ class Deployer implements \PHPCI\Plugin {
     
     $cmd = implode(' ;  ', $cmd);
 
-    return $this->phpci->executeCommand($cmd);
+    return $this->PHPCensor->executeCommand($cmd);
   }
 
   /**
