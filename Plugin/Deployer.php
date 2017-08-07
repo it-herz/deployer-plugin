@@ -1,6 +1,6 @@
 <?php
 /**
- * Deployer plugin for PHPCI
+ * Deployer plugin for PHPCensor
  *
  * @author  Alexey Boyko <ket4yiit@gmail.com>
  * @license MIT 
@@ -10,12 +10,12 @@
  * @see  http://deployer.org
  */
 
-namespace Ket4yii\PHPCI\Deployer\Plugin;
+namespace Ket4yii\PHPCensor\Deployer\Plugin;
 
-use PHPCI\Builder;
-use PHPCI\Model\Build;
+use PHPCensor\Builder;
+use PHPCensor\Model\Build;
 
-class Deployer implements \PHPCI\Plugin
+class Deployer implements \PHPCensor\Plugin
 {
 
     protected $phpci; 
@@ -32,7 +32,7 @@ class Deployer implements \PHPCI\Plugin
    * $options['regexp']    Regular Expression Filename Capture. Default: /\.php$/
    * $options['stub']      Stub Content. No Default Value
    *
-   * @param Builder $phpci   PHPCI instance 
+   * @param Builder $phpci   PHPCensor instance
    * @param Build   $build   Build instance 
    * @param array   $options Plugin options 
    */
@@ -50,7 +50,7 @@ class Deployer implements \PHPCI\Plugin
     }
 
     /**
-   * PHPCI plugin executor.
+   * PHPCensor plugin executor.
    *
    * @return bool Did plugin execute successfully 
    */
