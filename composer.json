@@ -1,5 +1,5 @@
 {
-    "name": "ket4yii/phpci-deployer-plugin",
+    "name": "ket4yii/deployer-phpcensor-plugin",
     "description": "Simple deployer(deployer.org) plugin for PHPCI",
     "license": "MIT",
     "authors": [
