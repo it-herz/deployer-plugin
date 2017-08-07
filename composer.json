@@ -1,5 +1,5 @@
 {
-    "name": "ket4yii/phpci-deployer-plugin",
+    "name": "ket4yii/deployer-phpcensor-plugin",
     "description": "Simple deployer(deployer.org) plugin for PHPCI",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
     },
     "autoload": {
       "psr-4": {
-        "Ket4yii\\PHPCI\\Deployer\\": ""
+        "Ket4yii\\PHPCensor\\Deployer\\": ""
       }
     },
     "require-dev": {
@@ -22,7 +22,7 @@
     },
     "extra": {
       "phpci": {
-        "pluginNamespace": "Ket4yii\\PHPCI\\Deployer\\Plugin",
+        "pluginNamespace": "Ket4yii\\PHPCensor\\Deployer\\Plugin",
         "suppliedPlugins": [
           {
             "name": "PhpDeployer",
