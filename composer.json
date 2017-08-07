@@ -1,12 +1,15 @@
 {
-    "name": "ket4yii/phpci-deployer-plugin",
+    "name": "itherz/phpci-deployer-plugin",
     "description": "Simple deployer(deployer.org) plugin for PHPCI",
     "license": "MIT",
     "authors": [
         {
             "name": "Alexey Boyko",
             "email": "ket4yiit@gmail.com"
-        }
+        },
+	{
+	    "name": "Dmitrii Zolotov",
+	    "email": "dzolotov@herzen.spb.ru"
     ],
     "require": {},
     "scripts": {
@@ -14,7 +17,7 @@
     },
     "autoload": {
       "psr-4": {
-        "Ket4yii\\PHPCI\\Deployer\\": ""
+        "Ket4yii\\PHPCensor\\Deployer\\": ""
       }
     },
     "require-dev": {
@@ -22,7 +25,7 @@
     },
     "extra": {
       "phpci": {
-        "pluginNamespace": "Ket4yii\\PHPCI\\Deployer\\Plugin",
+        "pluginNamespace": "Ket4yii\\PHPCensor\\Deployer\\Plugin",
         "suppliedPlugins": [
           {
             "name": "PhpDeployer",
